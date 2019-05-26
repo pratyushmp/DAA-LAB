@@ -29,7 +29,6 @@ public class Staff {
 		System.out.println("Salary:"+salary);
 		System.out.println("\n");
 	}
-
 }
 
 class Teaching extends Staff
