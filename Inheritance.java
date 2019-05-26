@@ -2,6 +2,92 @@ package practice;
 
 import java.util.Scanner;
 
+public class Staff {
+	String staffid;
+	String name;
+	long phone;
+	int salary;
+	
+	void getSdetails()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the staff id");
+		staffid = in.nextLine();
+		System.out.println("Enter the name");
+		name = in.nextLine();
+		System.out.println("Enter the phone number");
+		phone = in.nextLong();
+		System.out.println("Enter the salary of the staff");
+		salary = in.nextInt();
+	}
+	
+	void printSdetails()
+	{
+		System.out.println("Staff id:"+staffid);
+		System.out.println("Name:"+name);
+		System.out.println("Phone:"+phone);
+		System.out.println("Salary:"+salary);
+		System.out.println("\n");
+	}
+
+}
+
+class Teaching extends Staff
+{
+	String domain;
+	String publication;
+	
+	void getTdetails()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the domain");
+		domain = in.nextLine();
+		System.out.println("Enter the publication");
+		publication = in.nextLine();
+	}
+	
+	void printTdetails()
+	{
+		System.out.println("Domain:"+domain);
+		System.out.println("Publictaion:"+publication);
+		System.out.println("\n");
+	}
+}
+
+class Technical extends Staff
+{
+	String skills;
+	
+	void getT1details()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the skills");
+		skills = in.nextLine();
+	}
+	
+	void printT1details()
+	{
+		System.out.println("Skills:"+skills);
+	}
+}
+
+class Contract extends Staff
+{
+	String period;
+	
+	void getCdetails()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the period");
+		period = in.nextLine();
+	}
+	
+	void printCdetails()
+	{
+		System.out.println("Period:"+period);
+	}
+}
+
 class Inheritance
 {
 	public static void main(String args[])
